@@ -205,21 +205,16 @@
                 <input id="name" type="text" 
                 name=" "
                 placeholder=" Your name *"
-                
-                minlength="3" />
+                 />
               </div>
             </div>
-           
-
-
             <div class="col-md-6">
               <div class="single-input-inner">
                 <label><i class="fas fa-calculator"></i></label>
                 <input id="number" type="text"
                 name=" "
-                placeholder=" Mobile number"
-                
-                minlength="10" />
+                placeholder=" Mobile number *"
+                 />
               </div>
             </div>
 
@@ -228,8 +223,7 @@
                 <label><i class="fa fa-envelope"></i></label>
                 <input id="email" type="text"
                 name=" "
-                placeholder=" Your email"
-                
+                placeholder=" Your email *"
                  />
               </div>
             </div>
@@ -239,16 +233,14 @@
                 <label><i class="fas fa-pencil-alt"></i></label>
                 <textarea id="comments"
                 name=" "
-                placeholder=" Write message"
-                maxlength="200"
-                minlength="5"
+                placeholder=" Write message *"
                 ></textarea>
               </div>
             </div> 
 
 
             <div class="col-12"> 
-              <button onclick="mailContextHandler()" class="btn btn-base">SEND ENQUIRY</button>
+              <button onclick="enquiryContextHandler()" class="btn btn-base">SEND ENQUIRY</button>
             </div>
           </div>
         </form>    
@@ -516,10 +508,6 @@
 
 
 
-
-
-
-
     <!-- back to top area start -->
     <div class="back-to-top">
       <span class="back-top"><i class="fa fa-angle-up"></i></span>
@@ -529,12 +517,17 @@
     <!-- all plugins here -->
     <script>
       
-      function mailContextHandler(){
+      function enquiryContextHandler(){
         // getting values
         let name = document.getElementById("name").value;
         let number = document.getElementById("number").value;
         let email = document.getElementById("email").value;
+        post
+        proType
+        quantity
+        deliveryArea
         let comments = document.getElementById("comments").value;
+        
         //replacing with styled  
         document.getElementById("name").value = `%3E%20Name%20%3A%0A${name}%0A`;
         document.getElementById("number").value = `%3E%20Mobile%20Number%20%3A%0A${number}%0A`;

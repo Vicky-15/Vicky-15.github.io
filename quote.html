@@ -158,11 +158,6 @@
     <!-- navbar end -->
 
 
-
-
-
-
-
     <!-- breadcrumb start -->
     <div
       class="breadcrumb-area bg-overlay-2"
@@ -193,78 +188,101 @@
       <div class="contact-area mg-top-120 mb-120">
         <div class="row g-0 justify-content-center">
           <div class="col-lg-7">
-            <form class="contact-form text-center"
-            action="mailto:info@gmexportcompany.com"
-            method="post"
-            enctype="text/plain"
-            name="enquiry form"
-            
-            >
-              <h3>FOR QUOTE</h3>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="single-input-inner">
-                    <label><i class="fa fa-user"></i></label>
-                    <input type="text" placeholder="Your name" />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="single-input-inner">
-                    <label><i class="fas fa-calculator"></i></label>
-                    <input type="tel" placeholder=" Phone number" />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="single-input-inner">
-                    <label><i class="fa fa-envelope"></i></label>
-                    <input type="email" placeholder="Your email" />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="single-input-inner">
-                    <label><i class="fa fa-map-marker"></i></label>
-                    <input type="text" placeholder="Postal Address  *" />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="single-select-inner">
-                    <label><i class="far fa-file-alt"></i></label>
-                    <select class="single-select">
-                      <option>Product Type</option>
-                      <option value="1">White Sugar</option>
-                      <option value="2">Brown Sugar</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="single-input-inner">
-                    <label><i class="fa fa-plus-square"></i></label>
-                    <input
-                      type="number"
-                      placeholder="Quantity (Min:25-Tonnes) *"
-                    />
-                  </div>
-                </div>
+                <form
+                  id="enquiry_form"
+                  class="contact-form text-center"
+                  method="post"
+                  enctype="text/plain"
+                >
+                      <h3>FOR QUOTE</h3>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="single-input-inner">
+                            <label><i class="fa fa-user"></i></label>
+                            <input id="name" type="text" name=" " placeholder=" Your name *" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="single-input-inner">
+                            <label><i class="fas fa-calculator"></i></label>
+                            <input
+                              id="number"
+                              type="text"
+                              name=" "
+                              placeholder=" Mobile number *"
+                            />
+                          </div>
+                        </div>
 
-                <div class="col-12">
-                  <div class="single-input-inner">
-                    <label><i class="fa fa-map-marker"></i></label>
-                    <input type="text" placeholder="Delivery area  *" />
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="single-input-inner">
-                    <label><i class="fas fa-pencil-alt"></i></label>
-                    <textarea placeholder="Write message"></textarea>
-                  </div>
-                </div>
+                        <div class="col-md-6">
+                          <div class="single-input-inner">
+                            <label><i class="fa fa-envelope"></i></label>
+                            <input id="email" type="text" name=" " placeholder=" Your email *" />
+                          </div>
+                        </div>
 
-                <div class="col-12">
-                  <button type="submit" class="btn btn-base">SEND QUOTE</button>
-                </div>
-              </div>
-            </form>
-          </div>
+                        <div class="col-md-6">
+                          <div class="single-input-inner">
+                            <label><i class="fa fa-map-marker"></i></label>
+                            <input id="post" type="text" name=" " placeholder=" Postal Address *" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="single-select-inner">
+                            <label><i class="far fa-file-alt"></i></label>
+                            <select  id="proType" class="single-select">
+                              <option>Product Type</option>
+                              <option>White Sugar</option>
+                              <option>Brown Sugar</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="single-input-inner">
+                            <label><i class="fa fa-plus-square"></i></label>
+                            <input
+                              id="quantity"
+                              type="txt"
+                              name=" "
+                              placeholder=" Quantity (Min:25-Tonnes) *"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <div class="single-input-inner">
+                            <label><i class="fa fa-map-marker"></i></label>
+                            <input
+                              id="deliveryArea"
+                              type="text"
+                              name=" "
+                              placeholder=" Delivery area  *"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <div class="single-input-inner">
+                            <label><i class="fas fa-pencil-alt"></i></label>
+                            <textarea
+                              id="comments"
+                              name=" "
+                              placeholder=" Write message *"
+                            ></textarea>
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <button onclick="mailContextHandler()" class="btn btn-base">
+                            SEND QUOTE
+                          </button>
+                        </div>
+                      </div>
+                 </form>
+           </div>
+
           <div class="col-lg-5">
             <div class="contact-information-wrap">
               <h3>CONTACT INFORMATION</h3>
@@ -318,9 +336,6 @@
     <!-- contact area end -->
 
 
-
-
-
     <!-- map start -->
     <div class="container  pd-bottom-100" style="height: 400px">
       <iframe class="rounded-3"
@@ -334,11 +349,6 @@
       ></iframe>
     </div>
     <!-- map end -->
-
-
-
-
-
 
 
     <!-- footer area start -->
@@ -530,13 +540,6 @@
     <!-- footer-bottom area end -->
 
 
-
-
-
-
-
-
-
     <!-- back to top area start -->
     <div class="back-to-top">
       <span class="back-top"><i class="fa fa-angle-up"></i></span>
@@ -545,6 +548,43 @@
 
     <!-- all plugins here -->
     <script>
+
+
+function mailContextHandler(){ // getting values 
+let name = document.getElementById("name").value; 
+let number = document.getElementById("number").value; 
+let email = document.getElementById("email").value; 
+let post = document.getElementById("post").value; 
+let proType = document.getElementById("proType").value; 
+let quantity = document.getElementById("quantity").value; 
+let deliveryArea = document.getElementById("deliveryArea").value; 
+let comments = document.getElementById("comments").value; 
+
+//replacing with styled
+document.getElementById("name").value = `%3E%20Name%20%3A%0A${name}%0A`;
+document.getElementById("number").value = `%3E%20Mobile%20Number%20%3A%0A${number}%0A`;
+document.getElementById("email").value = `%3E%20Email%20Address%20%3A%0A${email}%0A`;
+document.getElementById("post").value = `%3E%20Postal%20Address%20%3A%0A${post}%0A`;
+document.getElementById("quantity").value = `%3E%20Quantity%20%3A%0A${quantity}%0A%0A%3D%3E%20Product%20Type%20%3A%0A${proType}%0A`;
+document.getElementById("deliveryArea").value = `%3E%20Delivery%20Area%20%3A%0A${deliveryArea}%0A`;
+document.getElementById("comments").value = `%3E%20Message%20%3A%0A%20%20%20%20${comments}`; 
+
+// build context
+actionString = `mailto:info@gmexportcompany.com?subject=Reg : Enquiry`;
+document.getElementById("enquiry_form").action=actionString;
+document.getElementById("enquiry_form").submit() 
+
+// hiding the URL encodes //
+setTimeout(()=>{
+document.getElementById("name").value = "" ; 
+document.getElementById("number").value = "" ; 
+document.getElementById("email").value = "" ; 
+document.getElementById("post").value = "" ; 
+document.getElementById("quantity").value = "" ; 
+document.getElementById("deliveryArea").value = "" ; 
+document.getElementById("comments").value = "" ;  },1000) }
+      
+
       document.getElementById('copyRight').appendChild(document.createTextNode(new Date().getFullYear()))
       </script>
     <script src="assets/js/vendor.js"></script>
