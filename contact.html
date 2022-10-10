@@ -203,36 +203,52 @@
               <div class="single-input-inner">
                 <label><i class="fa fa-user"></i></label>
                 <input id="name" type="text" 
-                name="Customer Name : "
-                placeholder="Dearrrrrrrr*"
-                aria-required="true" />
+                name=" "
+                placeholder=" Your name *"
+                
+                minlength="3" />
               </div>
             </div>
-            <!-- name="Customer_Name" -->
+           
 
 
-            <!-- <div class="col-md-6">
+            <div class="col-md-6">
               <div class="single-input-inner">
                 <label><i class="fas fa-calculator"></i></label>
-                <input name="Conatct_Number_:" minlength="10" maxlength="15" type="tel" required id="number"  placeholder=" Phone number" />
+                <input id="number" type="text"
+                name=" "
+                placeholder=" Mobile number"
+                
+                minlength="10" />
               </div>
             </div>
+
             <div class="col-12">
               <div class="single-input-inner">
                 <label><i class="fa fa-envelope"></i></label>
-                <input name="Contact_Mail_:" type="email" required id="email"  placeholder="Your email" />
+                <input id="email" type="text"
+                name=" "
+                placeholder=" Your email"
+                
+                 />
               </div>
             </div>
+
             <div class="col-12">
               <div class="single-input-inner">
                 <label><i class="fas fa-pencil-alt"></i></label>
-                <textarea name="Comments_:" required id="comments"  placeholder="Write message"></textarea>
+                <textarea id="comments"
+                name=" "
+                placeholder=" Write message"
+                maxlength="200"
+                minlength="5"
+                ></textarea>
               </div>
-            </div> -->
+            </div> 
 
 
-            <div class="col-12">
-              <button onclick="nameprint()" class="btn btn-base">SEND ENQUIRY</button>
+            <div class="col-12"> 
+              <button onclick="mailContextHandler()" class="btn btn-base">SEND ENQUIRY</button>
             </div>
           </div>
         </form>    
@@ -513,13 +529,28 @@
     <!-- all plugins here -->
     <script>
       
-      function nameprint(){
-        // action="mailto:info@gmexportcompany.com?subject=Enquiry from Website"
+      function mailContextHandler(){
+        // getting values
         let name = document.getElementById("name").value;
-        document.getElementById("name").value = `%3E%20${name}`
-        let actionString = `mailto:info@gmexportcompany.com?subject=New Web Enquiry`;
+        let number = document.getElementById("number").value;
+        let email = document.getElementById("email").value;
+        let comments = document.getElementById("comments").value;
+        //replacing with styled  
+        document.getElementById("name").value = `%3E%20Name%20%3A%0A${name}`;
+        document.getElementById("number").value = `%3E%20Mobile%20Number%20%3A%0A${number}`;
+        document.getElementById("email").value = `%3E%20Email%20Address%20%3A%0A${email}`;
+        document.getElementById("comments").value = `%3E%20Message%20%3A%0A%20%20%20%20${comments}`;
+        // build context
+        let actionString = `mailto:info@gmexportcompany.com?subject=Reg : Enquiry`;
         document.getElementById("enquiry_form").action=actionString;
         document.getElementById("enquiry_form").submit()
+        // hiding the urlencodes
+        setTimeout(()=>{
+          document.getElementById("name").value = "";
+          document.getElementById("number").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("comments").value = "";
+        },1000) 
       }
       
       document.getElementById('copyRight').appendChild(document.createTextNode(new Date().getFullYear()))
