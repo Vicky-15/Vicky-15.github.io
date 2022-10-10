@@ -536,9 +536,9 @@
         let email = document.getElementById("email").value;
         let comments = document.getElementById("comments").value;
         //replacing with styled  
-        document.getElementById("name").value = `%3E%20Name%20%3A%0A${name}`;
-        document.getElementById("number").value = `%3E%20Mobile%20Number%20%3A%0A${number}`;
-        document.getElementById("email").value = `%3E%20Email%20Address%20%3A%0A${email}`;
+        document.getElementById("name").value = `%3E%20Name%20%3A%0A${name}%0A`;
+        document.getElementById("number").value = `%3E%20Mobile%20Number%20%3A%0A${number}%0A`;
+        document.getElementById("email").value = `%3E%20Email%20Address%20%3A%0A${email}%0A`;
         document.getElementById("comments").value = `%3E%20Message%20%3A%0A%20%20%20%20${comments}`;
         // build context
         let actionString = `mailto:info@gmexportcompany.com?subject=Reg : Enquiry`;
