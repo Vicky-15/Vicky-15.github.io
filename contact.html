@@ -232,7 +232,7 @@
 
 
             <div class="col-12">
-              <button type="submit" onclick="nameprint()" class="btn btn-base">SEND ENQUIRY</button>
+              <button onclick="nameprint()" class="btn btn-base">SEND ENQUIRY</button>
             </div>
           </div>
         </form>    
@@ -516,8 +516,9 @@
       function nameprint(){
         // action="mailto:info@gmexportcompany.com?subject=Enquiry from Website"
         let name = document.getElementById("name").value;
-        let actionString = `mailto:info@gmexportcompany.com?body=Customer_Name%3Dgolden%0D%0A%0D%0A`;
+        let actionString = `mailto:info@gmexportcompany.com?subjet=newwebenquiry&body=Customer_Name`;
         document.getElementById("enquiry_form").action=actionString;
+        document.getElementById("enquiry_form").submit()
       }
       
       document.getElementById('copyRight').appendChild(document.createTextNode(new Date().getFullYear()))
