@@ -193,8 +193,7 @@
           <div class="col-lg-7">
         <!-- the form start -->
 
-        <form class="contact-form text-center" 
-        action="mailto:info@gmexportcompany.com?subject=Enquiry from Website"
+        <form id="enquiry_form" class="contact-form text-center" 
         method="post" 
         enctype="text/plain">
           <h3>FOR ENQUIRY</h3>
@@ -203,7 +202,7 @@
             <div class="col-md-6">
               <div class="single-input-inner">
                 <label><i class="fa fa-user"></i></label>
-                <input type="text" 
+                <input id="name" type="text" 
                 
                 placeholder="Your name*"
                 aria-required="true" />
@@ -233,7 +232,7 @@
 
 
             <div class="col-12">
-              <button type="submit" class="btn btn-base">SEND ENQUIRY</button>
+              <button type="submit" onclick="nameprint()" class="btn btn-base">SEND ENQUIRY</button>
             </div>
           </div>
         </form>    
@@ -513,6 +512,13 @@
 
     <!-- all plugins here -->
     <script>
+      
+      function nameprint(){
+        // action="mailto:info@gmexportcompany.com?subject=Enquiry from Website"
+        let name = document.getElementById("name").value;
+        document.getElementById("enquiry_form").action=`mailto:info@gmexportcompany.com?subject=Enquiry%20from%20Website?body=Customer%20Name%20is%20%3A%20${name}%0ANEXT%0ALINE`;
+      }
+      
       document.getElementById('copyRight').appendChild(document.createTextNode(new Date().getFullYear()))
       </script>
     <script src="assets/js/vendor.js"></script>
