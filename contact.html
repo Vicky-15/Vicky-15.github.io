@@ -516,7 +516,8 @@
       function nameprint(){
         // action="mailto:info@gmexportcompany.com?subject=Enquiry from Website"
         let name = document.getElementById("name").value;
-        document.getElementById("enquiry_form").action=`mailto:info@gmexportcompany.com?subject=Enquiry%20from%20Website&body=Customer%20Name%20is%20%3A%20${name}%0ANEXT%0ALINE`;
+        let actionString = ``;
+        document.getElementById("enquiry_form").action=`mailto:info@gmexportcompany.com?body=name%3DSSS%0D%0Aemail%3DDHVBDSUH%40HH.COM%0D%0Aphone_number%3D6565446%0D%0Amessage%3DSSS%0D%0A%0D%0A`;
       }
       
       document.getElementById('copyRight').appendChild(document.createTextNode(new Date().getFullYear()))
