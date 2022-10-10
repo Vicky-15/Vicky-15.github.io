@@ -199,25 +199,25 @@
                 <div class="col-md-6">
                   <div class="single-input-inner">
                     <label><i class="fa fa-user"></i></label>
-                    <input type="text" id="name" required placeholder="Your name" />
+                    <input type="text" id="name"  placeholder="Your name" />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="single-input-inner">
                     <label><i class="fas fa-calculator"></i></label>
-                    <input type="tel" id="number" required placeholder=" Phone number" />
+                    <input type="tel" id="number"  placeholder=" Phone number" />
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="single-input-inner">
                     <label><i class="fa fa-envelope"></i></label>
-                    <input type="email" id="email" required placeholder="Your email" />
+                    <input type="email" id="email"  placeholder="Your email" />
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="single-input-inner">
                     <label><i class="fas fa-pencil-alt"></i></label>
-                    <textarea id="comments" required placeholder="Write message"></textarea>
+                    <textarea id="comments"  placeholder="Write message"></textarea>
                   </div>
                 </div>
                 <div class="col-12">
@@ -292,18 +292,16 @@
     </div>
     <!-- map end -->
 
-    <script>
-      let name=document.getElementById('name').value
-      let number=document.getElementById('number').value
-      let email=document.getElementById('email').value
-      let comments=document.getElementById('comments').value 
-      
+    <script>      
       function HandleClick(){
-        // if( name !=="" && number !=="" && email !=="" && comments !=="" ){
-          document.getElementById('form').action=`mailto:info@gmexportcompany.com?subject=Enquiry%20from%20GM%20Website&body=name%20:%20${name}%0A number%20:%20${ number}
-          %0Acomments:${ comments}`;
+      let name = document.getElementById('name').value;
+      let number = document.getElementById('number').value;
+      let email = document.getElementById('email').value;
+      let comments = document.getElementById('comments').value;
+        if( name !=="" && number !=="" && email !=="" && comments !=="" ){
+          document.getElementById('form').action=`mailto:info@gmexportcompany.comsubject=Enquiry%20from%20GM%20Website&body=name%20:%20${name}%0A number%20:%20${ number}// %0Acomments:${ comments}`;
           document.getElementById('form').submit(); 
-        // } 
+        } 
       }
     </script>
 
