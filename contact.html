@@ -304,9 +304,7 @@
       }
       function HandleClick(){
         if(name!=="" && number!=="" && email!=="" && comments!=="" ){
-          document.getElementById('form').action=`mailto:info@gmexportcompany.com?  
-                 &subject= Enquiry from GM Website
-                 &body=${data}`;
+          document.getElementById('form').action=`mailto:info@gmexportcompany.com?subject=Enquiry from GM Website&body=${data}`;
           document.getElementById('form').submit();
         }
       }
