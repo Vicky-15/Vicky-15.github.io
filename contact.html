@@ -203,8 +203,8 @@
               <div class="single-input-inner">
                 <label><i class="fa fa-user"></i></label>
                 <input id="name" type="text" 
-                name="Customer_Name"
-                placeholder="Your Greatname*"
+                
+                placeholder="Dear Name*"
                 aria-required="true" />
               </div>
             </div>
@@ -516,7 +516,7 @@
       function nameprint(){
         // action="mailto:info@gmexportcompany.com?subject=Enquiry from Website"
         let name = document.getElementById("name").value;
-        let actionString = `mailto:info@gmexportcompany.com`;
+        let actionString = `mailto:info@gmexportcompany.com?body=Customer_Name%3Dgolden%0D%0A%0D%0A`;
         document.getElementById("enquiry_form").action=actionString;
       }
       
