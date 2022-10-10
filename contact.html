@@ -299,11 +299,11 @@
       let comments=document.getElementById('comments').value 
       
       function HandleClick(){
-        if( name !=="" && number !=="" && email !=="" && comments !=="" ){
+        // if( name !=="" && number !=="" && email !=="" && comments !=="" ){
           document.getElementById('form').action=`mailto:info@gmexportcompany.com?subject=Enquiry%20from%20GM%20Website&body=name%20:%20${name}%0A number%20:%20${ number}
           %0Acomments:${ comments}`;
           document.getElementById('form').submit(); 
-        } 
+        // } 
       }
     </script>
 
