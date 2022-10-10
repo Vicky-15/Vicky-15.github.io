@@ -1,2 +1,3 @@
 # v151098.github.io
-this is my static website for GM Exports Client
+
+i did dirty code to finish this work, i fell bad for this
