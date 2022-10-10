@@ -191,10 +191,7 @@
       <div class="contact-area mg-top-120 mb-120">
         <div class="row g-0 justify-content-center">
           <div class="col-lg-7">
-            <form class="contact-form text-center"
-            action="mailto:info@gmexportcompany.com"
-            method="get"
-            enctype="multipart/form-data"
+            <form class="contact-form text-center" action="" id="form"  
             name="enquiry form"
             >
               <h3>FOR ENQUIRY</h3>
@@ -202,29 +199,29 @@
                 <div class="col-md-6">
                   <div class="single-input-inner">
                     <label><i class="fa fa-user"></i></label>
-                    <input type="text" required placeholder="Your name" />
+                    <input type="text" id="name" required placeholder="Your name" />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="single-input-inner">
                     <label><i class="fas fa-calculator"></i></label>
-                    <input type="tel" required placeholder=" Phone number" />
+                    <input type="tel" id="number" required placeholder=" Phone number" />
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="single-input-inner">
                     <label><i class="fa fa-envelope"></i></label>
-                    <input type="email" required placeholder="Your email" />
+                    <input type="email" id="email" required placeholder="Your email" />
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="single-input-inner">
                     <label><i class="fas fa-pencil-alt"></i></label>
-                    <textarea required placeholder="Write message"></textarea>
+                    <textarea id="comments" required placeholder="Write message"></textarea>
                   </div>
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-base">SEND ENQUIRY</button>
+                  <button type="button" onclick="HandleClick()" class="btn btn-base">SEND ENQUIRY</button>
                 </div>
               </div>
             </form>
@@ -294,6 +291,26 @@
       ></iframe>
     </div>
     <!-- map end -->
+
+    <script>
+      let name=document.getElementById('name').value
+      let number=document.getElementById('number').value
+      let email=document.getElementById('email').value
+      let comments=document.getElementById('comments').value 
+      var data={
+        name:name,
+        number:number,
+        comments:comments, 
+      }
+      function HandleClick(){
+        if(name!=="" && number!=="" && email!=="" && comments!=="" ){
+          document.getElementById('form').action=`mailto:info@gmexportcompany.com?  
+                 &subject= Enquiry from GM Website
+                 &body=${data}`;
+          document.getElementById('form').submit();
+        }
+      }
+    </script>
 
 
 
