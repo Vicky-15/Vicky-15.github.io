@@ -57,7 +57,7 @@ body {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 20px;
   padding-top: 50px;
   background-color: #a669a4;
@@ -85,6 +85,7 @@ body {
 }
 .form p {
   align-self: center;
+  font-size: 16px;
 }
 .form p a {
   color: #e5dee5;
@@ -115,7 +116,7 @@ h1 {
 
 .input-group {
   display: flex;
-  margin: 15px 0;
+  margin: 10px 0;
   align-items: center;
   background-color: #e5dee5;
   padding: 5px 10px;
